@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Floating Sticky Notepad",
+  "version": "1.0",
+  "description": "Floating sticky notepad across all tabs.",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_title": "Sticky Notepad"
+  },
+
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

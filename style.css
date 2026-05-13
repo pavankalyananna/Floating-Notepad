@@ -1,0 +1,57 @@
+#floating-note {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+    height: 250px;
+    background: #fff8a6;
+    border: 1px solid #d8c96b;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 999999;
+    resize: both;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#note-header {
+    height: 40px;
+    background: #f4e46d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+    padding: 0 10px;
+    font-weight: bold;
+    user-select: none;
+}
+
+#close-note {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+
+#note-textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    background: transparent;
+
+    font-size: 14px;
+    color: #111111;
+
+    caret-color: #111111;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#note-textarea::placeholder {
+    color: #555555;
+}
